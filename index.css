@@ -1,4 +1,7 @@
 @font-face {font-family: "Blanka"; src: url("//db.onlinewebfonts.com/t/8cdbb48678e4418f22a2f507c2b975bd.eot"); src: url("//db.onlinewebfonts.com/t/8cdbb48678e4418f22a2f507c2b975bd.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/8cdbb48678e4418f22a2f507c2b975bd.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/8cdbb48678e4418f22a2f507c2b975bd.woff") format("woff"), url("//db.onlinewebfonts.com/t/8cdbb48678e4418f22a2f507c2b975bd.ttf") format("truetype"), }
+
+
+
 ::-moz-selection { /* Code for Firefox */
   color:white;
   background: #6d071a;
@@ -23,6 +26,164 @@
 * {
   box-sizing: border-box;
 }
+
+
+
+
+
+
+
+
+
+
+
+:root {
+  --bg: #dcdde1;     
+  --color-icon: #535c68;  
+  --social-icon1: #e4405f;
+  --social-icon2: #3b5999;
+  --social-icon3: #e4405f;
+  --social-icon4: #cd201f;
+  --social-icon5: #0077B5;  
+}
+
+* {
+  margin: 0;
+  padding: 0;  
+}
+
+.ssection {
+  width: 0%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  background: var(--bg);
+  z-index: -10;
+}
+
+.icon-list {
+  width: 100%;
+  max-width: 50rem;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-item {
+  list-style: none
+}
+
+.icon-link {  
+  display: inline-flex;
+  font-size: 3rem;  
+  text-decoration: none;  
+  color: var(--color-icon);
+  width: 6rem;
+  height: 6rem;   
+  transition: .5s linear;
+  position: relative;
+  z-index: 1;
+  margin: auto
+}
+
+.icon-link:hover {
+  color: #fff;
+}
+
+.icon-link i {
+  margin: auto;    
+}
+
+.icon-link::before {  
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 6rem;
+  height: 6rem;
+  background: #000;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.3s cubic-bezier(.95, .32, .37, 1.21);
+}
+  
+.icon-link:hover::before {  
+  transform: scale(1);
+}
+
+.icon-item:nth-child(1) .aaa:hover:before { 
+  background: var(--social-icon1); 
+}
+
+.icon-item:nth-child(2) .aaaa:hover:before { 
+  background: var(--social-icon2); 
+}
+
+.icon-item:nth-child(3) .aaaaa:hover:before { 
+  background: var(--social-icon3); 
+}
+
+.icon-item:nth-child(4) .aaaaaa:hover:before { 
+  background: var(--social-icon4); 
+}
+
+.icon-item:nth-child(5) .aaaaaaa:hover:before { 
+  background: var(--social-icon5); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .button1 {
@@ -265,7 +426,7 @@ width:75px
 
 
 
-
+/* 
 
 .heart {
     color: grey;
@@ -307,11 +468,19 @@ width:75px
   
   .heart-checkbox:checked + .heart {
     color: red;
-  }
+  } */
 
+/* .hearto:active{
+color:red;
+background-color: red;
+cursor: unset;
+} */
 
-
-
+.titro{
+  text-align: center;
+  background-color: #faf1da;
+  font-family: "Trebuchet";
+}
 
 
 
@@ -380,6 +549,21 @@ width:75px
   display: flex;
   justify-content:space-around;
 }
+.title1{
+  text-align: center;
+  border-bottom: 2px solid black;
+  width: 33%;
+}
+.title2{
+  text-align: center;
+  border-bottom: 2px solid black;
+  width: 15%;
+}
+.title3{
+  text-align: center;
+  border-bottom: 2px solid black;
+  width: 30%;
+}
 .panierow{
   display: flex;
   justify-content:space-around;
@@ -389,14 +573,15 @@ width:75px
   padding-left:50px ;
   height: 130px;
   padding-top: 10px;
+  margin: 10px;
 }
 .titlerow{
   margin:50px 0px 0px 20px;
   
 }
 .row1{
-  display: flex;
-  justify-content:space-around;
+
+  width: 45%;
 }
 .imagerow{
 border-radius: 20px;
@@ -404,15 +589,17 @@ border: solid 2px white;
 }
 .pricerow{
 padding-top: 50px;
+width:20%;
 }
 .removerow{
   padding-top: 50px;
   display: flex;
-  justify-content:space-between;
+  justify-content:center;
+  width:35%;
 }
 .pricenum{
   border-radius: 10px;
-  width:70px;
+  width:50px;
 }
 .plus{
   border-radius: 10px;
@@ -432,4 +619,178 @@ padding-top: 50px;
   border:none;
   height: 30px;
   margin-left: 10px;
+}
+.panieroww{
+  
+}
+.venduu{
+  display: flex;
+  justify-content:center;
+  margin-top: 30px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+
+.sspan{
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+.sspan .aa{
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+.sspan .aa:before,
+.sspan .aa:after{
+  position: absolute;
+  content: "PURCHASE";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.sspan .aa:before{
+  color: #fff;
+  background:#6d071a ;
+  transform: rotateY(0deg) translateZ(25px);
+}
+.sspan .aa:after{
+  color: #000;
+  transform: rotateX(90deg) translateZ(25px);
+  background-color: rgb(145, 255, 145);
+  content: "SOLD !!";
+}
+.sspan .aa:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.heartt{
+  background-color: transparent;
+  margin-bottom:-72px;
+}
+
+@charset "utf-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 16px;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  padding: 15px 10px;
+}
+.heart-like-button {
+  position: relative;
+  width: 320px;
+  height: 150px;
+}
+.heart-like-button:before {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  width: 15px;
+  height: 25px;
+  border-radius: 40px 40px 0 0;
+  background-color: gray;
+  content: "";
+  cursor: pointer;
+  transition: background .4s;
+}
+.heart-like-button:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin :100% 100%;
+  width: 15px;
+  height: 25px;
+  border-radius: 40px 40px 0 0;
+  background-color: gray;
+  content: "";
+  cursor: pointer;
+  transition: background .4s;
+}
+.heart-like-button.liked::before,
+.heart-like-button.liked::after {
+  background-color: #d65076;
+}
+.heart-like-button.liked {
+  animation: liked .4s ease;
+}
+@keyframes liked {
+  0% {
+    transform: scale(.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media screen and (max-width: 480px) {
+  #container {
+    height: auto;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
 }
