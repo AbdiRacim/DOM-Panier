@@ -126,7 +126,7 @@ function addItemToCart(title, price, imageSrc) {
     for (var i = 0; i < cartItemNames.length; i++) {
         if (cartItemNames[i].innerText == title) {
             alert('This item is already added to the cart')
-            return
+            return undefined
         }
     }
     var cartRowContents = `
@@ -138,10 +138,12 @@ function addItemToCart(title, price, imageSrc) {
             </div>
 
             <span class="pricerow">${price}</span>
-
+            
+            
+            
                 <div class="removerow">
                     <input class="pricenum" type="number" value="1" min="1">
-                    <button class="removebuton" type="button">Remove</button>
+                    <button class="removebuton abutton">Delete</button>
                 </div>
         `
     cartRow.innerHTML = cartRowContents
@@ -158,7 +160,7 @@ function updateCartTotal() {
         var cartRow = cartRows[i]
         var priceElement = cartRow.getElementsByClassName('pricerow')[0]
         var quantityElement = cartRow.getElementsByClassName('pricenum')[0]
-        var price = parseFloat(priceElement.innerText.replace(total , 'Da'))
+        var price = parseFloat(priceElement.innerText.replace(' Da' , ''))
         var quantity = quantityElement.value
         total = total + (price * quantity)
     }
@@ -180,6 +182,128 @@ function updateCartTotal() {
 
 
 
+                    const button = document.getElementsByClassName('heart-like-button')[0];
+                    const button1 = document.getElementsByClassName('heart-like-button')[1];
+                    const button2 = document.getElementsByClassName('heart-like-button')[2];
+                    const button3 = document.getElementsByClassName('heart-like-button')[3];
+                    const button4 = document.getElementsByClassName('heart-like-button')[4];
+                    const button5 = document.getElementsByClassName('heart-like-button')[5];
+                    const button6 = document.getElementsByClassName('heart-like-button')[6];
+                    const button7 = document.getElementsByClassName('heart-like-button')[7];
+                    const button8 = document.getElementsByClassName('heart-like-button')[8];
+                    const button9 = document.getElementsByClassName('heart-like-button')[9];
+                    const button10= document.getElementsByClassName('heart-like-button')[10];
+
+
+                    
+                        button.addEventListener("click", () => {
+                        if (button.classList.contains("liked")  ) {
+                            button.classList.remove("liked") ;
+                        }
+                        else {
+                            button.classList.add("liked")  ;
+                        }
+                        });
+
+                        button1.addEventListener("click", () => {
+                        if (button1.classList.contains("liked")) {
+                            button1.classList.remove("liked");
+                        } else {
+                            button1.classList.add("liked")}});
+
+                        button2.addEventListener("click", () => {
+                        if (button2.classList.contains("liked")) {
+                            button2.classList.remove("liked");
+                        } else {
+                            button2.classList.add("liked")}});
+
+                            button3.addEventListener("click", () => {
+                        if (button3.classList.contains("liked")) {
+                            button3.classList.remove("liked");
+                        } else {
+                            button3.classList.add("liked")}});
+
+
+                            button4.addEventListener("click", () => {
+                        if (button4.classList.contains("liked")) {
+                            button4.classList.remove("liked");
+                        } else {
+                            button4.classList.add("liked")}});
+
+                            button5.addEventListener("click", () => {
+                        if (button5.classList.contains("liked")) {
+                            button5.classList.remove("liked");
+                        } else {
+                            button5.classList.add("liked")}});
+
+                            button6.addEventListener("click", () => {
+                        if (button6.classList.contains("liked")) {
+                            button6.classList.remove("liked");
+                        } else {
+                            button6.classList.add("liked")}});
+
+
+
+                            button7.addEventListener("click", () => {
+                        if (button7.classList.contains("liked")  ) {
+                            button7.classList.remove("liked") ;
+                        }
+                        else {
+                            button7.classList.add("liked")  ;
+                        }
+                        });
+
+                        button8.addEventListener("click", () => {
+                        if (button8.classList.contains("liked")) {
+                            button8.classList.remove("liked");
+                        } else {
+                            button8.classList.add("liked")}});
+
+                        button9.addEventListener("click", () => {
+                        if (button9.classList.contains("liked")) {
+                            button9.classList.remove("liked");
+                        } else {
+                            button9.classList.add("liked")}});
+
+                            button10.addEventListener("click", () => {
+                        if (button10.classList.contains("liked")) {
+                            button10.classList.remove("liked");
+                        } else {
+                            button10.classList.add("liked")}});
+
+
+
+
+
+
+
+// const button = document.getElementById(id);
+
+                    
+//                         button.addEventListener("click", () => {
+//                         if (button.classList.contains("liked")) {
+//                             button.classList.remove("liked");
+//                         } else {
+//                             button.classList.add("liked");
+//                         }
+//                         });
+
+
+
+
+
+
+                        // function hearty(id) {
+                        //     const button = document.getElementById(id);
+                        //     button.addEventListener("click", () => {
+                        //             if (button.classList.contains("liked")) {
+                        //                 button.classList.remove("liked");
+                        //             } else {
+                        //                 button.classList.add("liked");
+                        //             }
+                        //             });
+                        //         }
+
 
 
                     // function changeColor(color) { 
@@ -192,19 +316,6 @@ function updateCartTotal() {
                     //     mot1.style.color = '#00ff00';
                     // }); 
 
-                    const button = document.getElementsByClassName('heart-like-button')[0];
-
-                    
-                        button.addEventListener("click", () => {
-                            // for (let i = 0; i < button.length; i++) {
-                            //                         const button = button[i];
-                            //                     }
-                        if (button.classList.contains("liked")) {
-                            button.classList.remove("liked");
-                        } else {
-                            button.classList.add("liked");
-                        }
-                        });
 
 
 
